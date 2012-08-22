@@ -1,0 +1,134 @@
+CC BY-NC-SA Except where otherwise noted, this work is licensed under Creative
+Commons Attribution-NonCommercial-ShareAlike 3.0.
+
+Name:
+
+1. Have you been enrolled in <course name> (or an equivalent course at another
+institution) before?  If so, for how many weeks?
+
+
+2. Which aspect of making a simple system call (e.g. gettimeofday) is the most
+expensive in terms of the required CPU time?
+
+A. making a function call
+B. entering and exiting the kernel
+C. storing the system call's return value
+D. executing the system routine (i.e. determining the current time)
+E. I am not familiar with this terminology / I don't know.
+
+
+3. Which is true of the operating system kernel for a modern system?
+
+A. The kernel code is always executing.
+B. The kernel only stores resource state, it does not execute code.
+C. The kernel code executes when the kernel process is scheduled.
+D. The kernel code executes in response to hardware interrupts and system
+   calls.
+E. I am not familiar with this terminology / I don't know.
+
+
+4. Operating systems use a scheduling algorithm to determine which process
+should have access to the CPU.  You notice that in your system, all of the
+processes fall into one of two general categories: interactive, I/O-bound
+processes (e.g. a user terminal) and long-running, compute-heavy processes
+(e.g. a physics simulation).  Which CPU scheduling policy would best fit your
+system's workload?
+
+A. A policy that schedules processes in the order they arrive.
+B. A policy that schedules an equal amount of time to every process.
+C. A policy that prioritizes processes according to how frequently they block.
+D. A policy that prioritizes processes according to their remaining execution
+   time.
+E. I am not familiar with this terminology / I don't know.
+
+
+5. Suppose you have a fixed-size queue shared between two processes on a system
+that has one CPU.  One process produces data and puts it into the queue, and
+the other process reads data from the queue and removes it.  For correctness,
+you want to ensure that the producing process only writes when there is space
+available, and the consuming process only reads when there is data available.
+Your solution needs to be as efficient as possible. You should:
+
+A. Only let one process access the queue at a time.
+B. Have the producing process signal to the consuming process when it fills a
+   slot - the consuming process will only consume as many slots as received
+   signals.
+C. Have producing process signal when it fills a slot, and the consuming
+   process signal when it empties a slot.
+D. Have the producing process signal when it fills a slot, the consuming
+   process signal when it empties a slot, and let only one of them access the
+   queue at a time.
+E. I am not familiar with this terminology / I don't know.
+
+
+6. Segmentation and paging are two common schemes that operating systems use to
+manage memory.  For a fixed workload of processes, which would be true of a
+system that switched from using variably-sized memory segments (segmentation)
+to using fixed-size memory pages (paging)?
+
+A. Memory fragmentation would be reduced, and processes would require more
+   page table entries than segment table entries.
+B. Memory fragmentation would be reduced, and processes would require fewer
+   page table entries than segment table entries.
+C. Memory fragmentation would be increased, and processes would require more
+   page table entries than segment table entries.
+D. Memory fragmentation would be increased, and processes would require fewer
+   page table entries than segment table entries.
+E. I am not familiar with this terminology / I don't know.
+
+
+7. Suppose we have a file system that uses two forms of pointers to find file
+data: direct and indirect pointers.  We refer to this set of pointers as a
+"block map".  Direct pointers point directly at file data, and indirect
+pointers point at a separate disk block that contains multiple pointers to file
+data.  Every file in the system uses the same block map structure, with unused
+pointers directed at null.  Eliminating the indirect pointers while supporting
+the same maximum file size would be...
+
+<blockmap.png>
+
+A. Beneficial - The new block map would save space storing small files.
+B. Beneficial - The new block map would save space storing large files.
+C. Detrimental - The new block map would waste space storing small files.
+D. Detrimental - The new block map would waste space storing large files.
+E. I am not familiar with this terminology / I don't know.
+
+
+8. Your company has developed a new I/O device, and you've been tasked with
+writing its driver. The device produces a byte of data at frequent, regular
+times.  The device does not save data after it has been produced.  Which of the
+following options for accessing the device would best suit your driver?
+
+A. Have the kernel check the device for new data when it is idle.
+B. Have the kernel check the device for new data at set time intervals.
+C. Have the kernel check the device data when applications request it.
+D. Have the device alert the kernel when it has new data so that the kernel
+   can collect the data as soon as it is available.
+E.  I am not familiar with this terminology / I don't know.
+
+
+9. You and your friends have just opened an exclusive theater, and you need to
+control who can enter the front door.  Patrons are expected to enter the
+theater only once per evening, but the group of patrons who are permitted to
+enter is expected to change often.  Which of the following door protection
+mechanisms would you suggest to make sure you allow only the current set of
+allowed patrons to enter?
+
+A. Lock the door and provide approved patrons with keys.
+B. Hire a bouncer to check approved patron names on a list.
+C. Camouflage the door and only reveal its location to approved patrons.
+D. Print and distribute tickets to approved patrons and allow only
+   ticket-holders in the door.
+E. I am not familiar with this terminology / I don't know.
+
+
+10. Suppose we have two instances (A and B) of the same program running on an
+otherwise idle, single-CPU system.  Process A begins executing exactly 1
+millisecond before process B.  What can be said of their relative execution
+rates?
+
+A. Process A will remain 1 ms ahead until it completes.
+B. Process A will remain ahead, but not necessarily by 1 ms.
+C. Process B will eventually overtake A, if run for a long enough time.
+D. The relative execution rates of A and B cannot be determined.
+E. I am not familiar with this terminology / I don't know.
