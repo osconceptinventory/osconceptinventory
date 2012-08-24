@@ -85,7 +85,7 @@ data.  Every file in the system uses the same block map structure, with unused
 pointers directed at null.  Eliminating the indirect pointers while supporting
 the same maximum file size would be...
 
-<blockmap.png>
+<images/blockmap.png>
 
 A. Beneficial - The new block map would save space storing small files.
 B. Beneficial - The new block map would save space storing large files.
@@ -96,7 +96,7 @@ E. I am not familiar with this terminology / I don't know.
 
 8. Your company has developed a new I/O device, and you've been tasked with
 writing its driver. The device produces a byte of data at frequent, regular
-times.  The device does not save data after it has been produced.  Which of the
+times and is capable of storing a small amount of produced data.  Which of the
 following options for accessing the device would best suit your driver?
 
 A. Have the kernel check the device for new data when it is idle.
@@ -104,7 +104,7 @@ B. Have the kernel check the device for new data at set time intervals.
 C. Have the kernel check the device data when applications request it.
 D. Have the device alert the kernel when it has new data so that the kernel
    can collect the data as soon as it is available.
-E.  I am not familiar with this terminology / I don't know.
+E. I am not familiar with this terminology / I don't know.
 
 
 9. You and your friends have just opened an exclusive theater, and you need to
@@ -121,6 +121,20 @@ D. Print and distribute tickets to approved patrons and allow only
    ticket-holders in the door.
 E. I am not familiar with this terminology / I don't know.
 
+9-Alt. You and your friends are planning a series of exclusive parties, and you
+need to control who is allowed to attend.  Party guests are expected to enter a
+party only once per evening, but the group of guests who are invited is
+expected to change often.  Which of the following mechanisms would you suggest
+to ensure that only the current set of invited guests are allowed to enter the
+party?
+
+A. Lock the door and provide approved guests with keys.
+B. Hire a bouncer to check approved guest names on a list.
+C. Camouflage the door and only reveals its location to approved guests.
+D. Print and distributed tickets to approved guests and allow ticket-holders in
+   the door.
+E. I am not familiar with the terminology / I don't know.
+
 
 10. Suppose we have two instances (A and B) of the same program running on an
 otherwise idle, single-CPU system.  Process A begins executing exactly 1
@@ -132,3 +146,20 @@ B. Process A will remain ahead, but not necessarily by 1 ms.
 C. Process B will eventually overtake A, if run for a long enough time.
 D. The relative execution rates of A and B cannot be determined.
 E. I am not familiar with this terminology / I don't know.
+
+
+11. As a student, you find yourself frequently moving textbooks between your
+bookshelf, where you store them, and your desk, where you use them to study.
+Unfortunately, your desk is undersized and only has space for a small number of
+books, and you hate having to move books back and forth between the two.  You
+need your operating systems book from you bookshelf to study, but your desk
+currently has no free space available.  Which book to you remove from your desk
+to make room for your OS book, keeping in mind that you hope to minimize the
+number of future trips to the bookshelf?
+
+A. Make room by moving a random book to the bookshelf.
+B. Make room by moving a book that you have not used recently.
+C. Make room by moving the book that has been on the desk for the longest time.
+D. Make room by moving the book that has been on the desk for the shortest time.
+E. I am not familiar with this terminology / I don't know.
+
